@@ -61,7 +61,12 @@ server: less
 	cd test/html && python -m SimpleHTTPServer
 
 
-build: components dist/less-1.3.1.min.js
+index.js: dist/less-1.3.1.min.js
+	@cp dist/less-1.3.1.min.js ./index.js
+
+dist/less-1.3.1.min.js: min
+
+build-component: components index.js
 	@component build --dev --out component-build
 
 components: component.json
@@ -70,6 +75,7 @@ components: component.json
 clean:
 	git rm dist/*
 	rm -rf components template.js
+	rm index.js
 
 dist: clean min
 	git add dist/*
