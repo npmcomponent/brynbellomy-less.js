@@ -1,0 +1,13 @@
+{
+  "name": "less.js",
+  "repo": "brynbellomy/less.js",
+  "description": "less.js as a component",
+  "version": "1.3.1",
+  "keywords": ["css", "parser", "lesscss", "browser"],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "dist/less-1.3.1.min.js"
+  ]
+}
